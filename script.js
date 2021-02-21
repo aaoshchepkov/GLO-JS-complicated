@@ -1,18 +1,11 @@
-'use strict';
+let num = 100;
 
-let lesson4 = function (a) {
-  if (typeof a !== 'string') {
-    alert('Введите строку');
-  } else if(a = a.trim(), a.length >= 30) {
-    a = a.trim();
-    a = a.split('');
-    a = a.slice(0, 30);
-    a = a.join('') + '...';
-  } else {
-    a = a.trim();
+nextNum:
+for (let i = 2; i <= num; i++) {
+  for (let j = 2; j < i; j++) { 
+    if (i % j === 0) {
+    continue nextNum;
+  } 
   }
-  return a;
-};
-
-
-console.log(lesson4('                       fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'));
+ console.log('Простое число: ' + i + ', первый делитель 1,' +' второй делитель: ' + i); 
+}
