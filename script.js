@@ -1,8 +1,18 @@
-let num = 266219;
+'use strict';
 
-num = num.toString();
-console.log(num.charAt(0) * num.charAt(1) * num.charAt(2) * num.charAt(3) * num.charAt(4) * num.charAt(5));
-myNum = num.charAt(0) * num.charAt(1) * num.charAt(2) * num.charAt(3) * num.charAt(4) * num.charAt(5);
-myNum = myNum ** 3;
-myNum = myNum.toString();
-console.log(myNum.charAt(0) + myNum.charAt(1));
+let lesson4 = function (a) {
+  if (typeof a !== 'string') {
+    alert('Введите строку');
+  } else if(a = a.trim(), a.length >= 30) {
+    a = a.trim();
+    a = a.split('');
+    a = a.slice(0, 30);
+    a = a.join('') + '...';
+  } else {
+    a = a.trim();
+  }
+  return a;
+};
+
+
+console.log(lesson4('                       fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'));
